@@ -2,6 +2,20 @@
 
 Tools for setting up Marketing Cloud orgs for the CNX26 event.
 
+## Getting Started
+
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/melanie-pulido/cnx26-setup.git
+   cd cnx26-setup
+   ```
+
+2. **Open in AI Expert Suite:**
+   - In Suite, click the workspace selector (top-left)
+   - Choose "Open folder..."
+   - Select the `cnx26-setup` folder you just cloned
+   - The slash commands will be automatically available!
+
 ## Available Commands
 
 - `/create-cnx26-bu` — Create a CNX26 MCE+ Session Business Unit and assign an admin user
