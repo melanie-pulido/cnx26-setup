@@ -31,8 +31,9 @@ This will:
    
 3. **Use the slash commands:**
    - `/create-cnx26-bu` — Create a new Business Unit
+   - `/deploy-parent-package` — Deploy CNX26 content (Journey, Data, Assets)
    - `/create-cnx26-students` — Batch-create student accounts
-   - `/deploy-mc-package` — Deploy MC packages
+   - `/deploy-mc-package` — Deploy custom MC packages
 
 The commands are powered by Claude and handle all the API complexity for you!
 
@@ -49,6 +50,9 @@ python3 test_credentials.py YOUR_CLIENT_ID YOUR_CLIENT_SECRET YOUR_SUBDOMAIN YOU
 
 # Create Business Unit
 python3 create_cnx26_bu.py AUTH_MID CLIENT_ID CLIENT_SECRET SUBDOMAIN PARENT_MID ADMIN_USERNAME
+
+# Deploy parent package
+python3 deploy_parent_package.py AUTH_MID CLIENT_ID CLIENT_SECRET SUBDOMAIN TARGET_BU_MID
 
 # Create students
 python3 create_cnx26_students.py AUTH_MID CLIENT_ID CLIENT_SECRET SUBDOMAIN TARGET_BU_MID
@@ -72,8 +76,10 @@ python3 create_cnx26_students.py AUTH_MID CLIENT_ID CLIENT_SECRET SUBDOMAIN TARG
 ## 📖 What's Included
 
 - `create_cnx26_bu.py` — Creates "CNX26 MCE+ Session" BU
+- `deploy_parent_package.py` — Deploys CNX26 Parent package to a BU
 - `create_cnx26_students.py` — Batch-creates student users from CSV
 - `test_credentials.py` — Validates OAuth credentials
+- `CNX26-Parent.json` — Complete parent package (Journey, Data Extensions, Content)
 - `.claude/commands/` — AI Expert Suite slash command definitions
 - `example_students.csv` — Sample CSV format
 
@@ -81,7 +87,10 @@ python3 create_cnx26_students.py AUTH_MID CLIENT_ID CLIENT_SECRET SUBDOMAIN TARG
 
 1. Run `/create-cnx26-bu` to create the session BU
    - Saves the BU MID for next step
-2. Run `/create-cnx26-students` with the BU MID
+2. Run `/deploy-parent-package` with the BU MID
+   - Deploys all CNX26 content (Journey, emails, data extensions)
+   - Takes 5-10 minutes for large packages
+3. Run `/create-cnx26-students` with the BU MID
    - Paste your student list (CSV format)
    - Creates all accounts in ~2-5 seconds per student
 
