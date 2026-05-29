@@ -4,12 +4,24 @@ Automated tools for setting up Marketing Cloud Business Units and student accoun
 
 ## 🚀 Quick Start
 
-### For AI Expert Suite Users
+### One-Line Setup (Recommended)
 
-1. **Clone this repo:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/melanie-pulido/cnx26-setup/main/setup.sh | bash
+```
+
+This will:
+- Clone the repository
+- Install Python dependencies
+- Show you exactly how to open it in AI Expert Suite
+
+### Manual Setup
+
+1. **Clone and setup:**
    ```bash
    git clone https://github.com/melanie-pulido/cnx26-setup.git
    cd cnx26-setup
+   pip install requests
    ```
 
 2. **Open in AI Expert Suite:**
